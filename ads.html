@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    background: #fff url('../../Web/Images/bg.jpg') no-repeat center top;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin: 0px auto auto auto;
+    color: #000;
+    }
+    
+    p {
+    padding: 2px;
+    margin: 0px;
+    }
+    
+    #main_container {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 60px;
+    }
+    
+    .top_bar {
+    width: 1000px;
+    height: 38px;
+    background-color: #4a4a4a;
+    }
+    
+    .top_search {
+    width: 370px;
+    height: 32px;
+    margin: 0px 20px 0 0;
+    _margin: 0px 10px 0 0;
+    float: right;
+    background: url('../../Web/Images/top_search_bg.gif') no-repeat center;
+    }
+    
+    input.search_input {
+    width: 182px;
+    height: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+    border: 1px solid #dbdbdb;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+    }
+    
+    .search_text {
+    float: left;
+    width: 110px;
+    padding: 8px 0 0 15px;
+    color: #999999;
+    }
+    
+    .search_text a {
+    text-decoration: none;
+    color: #999999;
+    }
+    
+    .search_bt {
+    float: left;
+    padding: 2px 0 0 15px;
+    }
+    
+    .languages {
+    float: right;
+    width: 150px;
+    padding: 8px 0 0 0;
+    }
+    
+    .lang_text {
+    float: left;
+    padding: 0 5px 0 0;
+    color: #b3adad;
+    }
+    
+    a.lang {
+    display: block;
+    float: left;
+    padding: 0 5px 0 5px;
+    }
+    
+    #header {
+    width: 1000px;
+    height: 173px;
+    background: url('../../Web/Images/header_bg.jpg') no-repeat 0px 0px;
+    margin: auto;
+    }
+    
+    #logo {
+    float: left;
+    padding: 15px;
+    }
+    /*------------------------------oferte_content-----------------------*/
+    .oferte_content {
+    width: 600px;
+    height: 164px;
+    float: left;
+    padding: 0 0 0 50px;
+    }
+    
+    .top_divider {
+    float: left;
+    width: 1px;
+    height: 164px;
+    }
+    
+    .oferta {
+    width: 538px;
+    float: left;
+    padding: 15px 30px 0 30px;
+    }
+    
+    .oferta_img {
+    float: left;
+    padding: 0 0 10px 0;
+    }
+    
+    .oferta_title {
+    font-size: 15px;
+    color: #b72c24;
+    font-weight: bold;
+    }
+    
+    .oferta_details {
+    width: 400px;
+    float: left;
+    padding: 0 0 0 30px;
+    }
+    
+    .oferta_text {
+    padding: 5px 0 5px 0;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: justify;
+    line-height: 15px;
+    }
+    
+    a.details {
+    width: 83px;
+    height: 21px;
+    display: block;
+    float: right;
+    margin: 5px 0 0 0;
+    padding-left: 5px;
+    background: url('../../Web/Images/details_bt_bg.gif') no-repeat center;
+    text-align: center;
+    line-height: 21px;
+    text-decoration: none;
+    color: #000000;
+    }
+    /*---------------------oferta_pagination-----------------------------*/
+    
+    div.oferta_pagination {
+    clear: both;
+    padding: 10px 0 0 0;
+    _padding: 0px 0 0 0;
+    margin: 5px;
+    text-align: center;
+    float: left;
+    font-size: 10px;
+    }
+    
+    div.oferta_pagination a {
+    width: 22px;
+    height: 22px;
+    display: block;
+    float: left;
+    margin: 0 0 0 5px;
+    _margin: 0 0 0 3px;
+    line-height: 23px;
+    text-align: center;
+    background: url('../../Web/Images/pag_bg.gif') no-repeat center;
+    text-decoration: none;
+    color: #9d8b8b;
+    }
+    
+    div.oferta_pagination a:hover, div.pagination a:active {
+    width: 22px;
+    height: 22px;
+    display: block;
+    float: left;
+    line-height: 23px;
+    text-align: center;
+    background: url('../../Web/Images/pag_bg_a.gif') no-repeat center;
+    text-decoration: none;
+    color: #ad1614;
+    }
+    
+    div.oferta_pagination span.current {
+    width: 22px;
+    height: 22px;
+    display: block;
+    float: left;
+    line-height: 23px;
+    text-align: center;
+    background: url('../../Web/Images/pag_bg_a.gif') no-repeat center;
+    text-decoration: none;
+    color: #ad1614;
+    }
+    
+    #main_content {
+    clear: both;
+    }
+    /*---------------- menu tab----------------------*/
+    #menu_tab {
+    width: 1000px;
+    height: 50px;
+    background-color: #fff;
+    }
+    
+    .left_menu_corner {
+    width: 9px;
+    height: 50px;
+    float: left;
+    background: url('../../Web/Images/menu_left.gif') no-repeat center;
+    }
+    
+    .right_menu_corner {
+    width: 9px;
+    height: 50px;
+    float: left;
+    background: url('../../Web/Images/menu_right.gif') no-repeat center;
+    }
+    
+    ul.menu {
+    list-style-type: none;
+    float: left;
+    display: block;
+    width: 982px;
+    margin: 0px;
+    padding: 0px;
+    background: url('../../Web/Images/menu_bg.gif') repeat-x;
+    }
+    
+    ul.menu li {
+    display: inline;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 50px;
+    }
+    
+    ul.menu li.divider {
+    display: inline;
+    width: 2px;
+    height: 50px;
+    float: left;
+    background: url('../../Web/Images/menu_divider.gif') no-repeat center;
+    }
+    
+    a.nav1:link, a.nav1:visited {
+    display: block;
+    float: left;
+    padding: 0px 8px 0px 22px;
+    margin: 0 14px 0 14px;
+    height: 50px;
+    text-decoration: none;
+    background: url('../../Web/Images/home.png') no-repeat left 50%;
+    color: #676d77;
+    }
+    
+    a.nav2:link, a.nav2:visited {
+    display: block;
+    float: left;
+    padding: 0px 8px 0px 22px;
+    margin: 0 14px 0 14px;
+    height: 50px;
+    text-decoration: none;
+    background: url('../../Web/Images/services.png') no-repeat left 50%;
+    color: #676d77;
+    }
+    
+    a.nav3:link, a.nav3:visited {
+    display: block;
+    float: left;
+    padding: 0px 8px 0px 22px;
+    margin: 0 14px 0 14px;
+    height: 50px;
+    text-decoration: none;
+    background: url('../../Web/Images/favs.png') no-repeat left 50%;
+    color: #676d77;
+    }
+    
+    a.nav4:link, a.nav4:visited {
+    display: block;
+    float: left;
+    padding: 0px 8px 0px 22px;
+    margin: 0 14px 0 14px;
+    height: 50px;
+    text-decoration: none;
+    background: url('../../Web/Images/user_add.png') no-repeat left 50%;
+    color: #676d77;
+    }
+    
+    a.nav5:link, a.nav5:visited {
+    display: block;
+    float: left;
+    padding: 0px 8px 0px 22px;
+    margin: 0 14px 0 14px;
+    height: 50px;
+    text-decoration: none;
+    background: url('../../Web/Images/car.png') no-repeat left 50%;
+    color: #676d77;
+    }
+    
+    a.nav6:link, a.nav6:visited {
+    display: block;
+    float: left;
+    padding: 0px 8px 0px 22px;
+    margin: 0 14px 0 14px;
+    height: 50px;
+    text-decoration: none;
+    background: url('../../Web/Images/contact-new.png') no-repeat left 50%;
+    color: #676d77;
+    }
+    
+    a.nav1:hover, a.nav2:hover, a.nav3:hover, a.nav4:hover, a.nav5:hover, a.nav6:hover {
+    color: #333333;
+    }
+    
+    
+    li.currencies {
+    width: 180px;
+    float: left;
+    padding: 0 0 0 15px;
+    _padding: 12px 0 0 15px;
+    color: #676d77;
+    font-size: 11px;
+    font-weight: bold;
+    }
+    /*----------------crumb_navigation-------------*/
+    .crumb_navigation {
+    width: 980px;
+    height: 15px;
+    padding: 5px 10px 0 20px;
+    color: #333333;
+    background: url('../../Web/Images/navbullet.png') no-repeat 5px 6px;
+    }
+    
+    .crumb_navigation a {
+    color: #0fa0dd;
+    text-decoration: underline;
+    }
+    
+    span.current {
+    color: #0fa0dd;
+    }
+    
+    /*-------------left_content------------------*/
+    .left_content {
+    width: 196px;
+    float: left;
+    padding-bottom:60px;
+    }
+    
+    .title_box {
+    width: 196px;
+    height: 30px;
+    margin: 5px 0 0 0;
+    background: url('../../Web/Images/menu_title_bg.gif') no-repeat center;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 30px;
+    }
+    /*--------left menu---------*/
+    ul.left_menu {
+    width: 196px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    }
+    
+    ul.left_menu li {
+    margin: 0px;
+    list-style: none;
+    }
+    
+    ul.left_menu li.odd a {
+    width: 166px;
+    height: 25px;
+    display: block;
+    background: #dad0d0 url('../../Web/Images/checked.png') no-repeat 5px 5px;
+    border-bottom: 1px #FFFFFF solid;
+    text-decoration: none;
+    color: #504b4b;
+    padding: 0 0 0 30px;
+    line-height: 25px;
+    }
+    
+    ul.left_menu li.odd a:hover {
+    background: #7bbcc7 url('../../Web/Images/checked.png') no-repeat 5px 5px;
+    color: #FFFFFF;
+    }
+    
+    ul.left_menu li.even a {
+    width: 166px;
+    height: 25px;
+    display: block;
+    background: #eee6e6 url('../../Web/Images/small_plus.png') no-repeat 5px 5px;
+    border-bottom: 1px #FFFFFF solid;
+    text-decoration: none;
+    color: #504b4b;
+    padding: 0 0 0 30px;
+    line-height: 25px;
+    }
+    
+    ul.left_menu li.even a:hover {
+    background: #7bbcc7 url('../../Web/Images/small_plus.png') no-repeat 5px 5px;
+    color: #FFFFFF;
+    }
+    
+    
+    .border_box {
+    width: 194px;
+    height: auto;
+    text-align: center;
+    border: 1px #6da6b1 solid;
+    }
+    
+    .product_title {
+    color: #ea2222;
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+    }
+    
+    .product_title a {
+    text-decoration: none;
+    color: #ea2222;
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+    }
+    
+    .product_title a:hover {
+    color: #064E5A;
+    }
+    
+    .product_img {
+    padding: 5px 0 5px 0;
+    }
+    
+    .prod_price {
+    padding: 5px 0 5px 0;
+    }
+    
+    span.reduce {
+    color: #999999;
+    text-decoration: line-through;
+    }
+    
+    span.price {
+    color: #ea2222;
+    }
+    /*----------newsletter--------------*/
+    input.newsletter_input {
+    width: 160px;
+    height: 16px;
+    border: 1px #ddd9d9 solid;
+    margin: 10px 0 5px 0;
+    font-size: 12px;
+    padding: 3px;
+    color: #999999;
+    }
+    
+    a.join {
+    width: 17px;
+    display: block;
+    margin: 5px 0 5px 140px;
+    _margin: 5px 0 5px 130px;
+    background: url('../../Web/Images/blue-add.png') no-repeat left 50%;
+    padding: 0 0 0 20px;
+    text-decoration: none;
+    color: #1c4a52;
+    }
+    
+    .banner_adds {
+    width: 194px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    }
+    
+    /*center content--------------------------*/
+    .center_content {
+    width: 585px;
+    height:auto;
+    float: left;
+    padding: 5px 10px 30px;
+    }
+    
+    .center_title_bar {
+    width: 520px;
+    height: 33px;
+    float: left;
+    padding: 0 0 0 40px;
+    margin: 0 0 0 12px;
+    _margin: 0 0 0 6px;
+    line-height: 33px;
+    font-size: 12px;
+    color: #847676;
+    font-weight: bold;
+    background: url('../../Web/Images/bar_bg.gif') no-repeat center;
+    }
+    
+    /*----------------------right content--------------*/
+    .right_content {
+    width: 196px;
+    float: left;
+    padding: 5px 0 0 0;
+    }
+    
+    .shopping_cart {
+    width: 195px;
+    height: 84px;
+    text-align: center;
+    background: url('../../Web/Images/cart_bg.gif') no-repeat center;
+    }
+    
+    .cart_title {
+    font-size: 12px;
+    font-size: 12px;
+    color: #847676;
+    font-weight: bold;
+    padding: 8px 0 0 0;
+    }
+    
+    .cart_details {
+    width: 115px;
+    float: left;
+    padding: 5px 0 0 15px;
+    text-align: left;
+    }
+    
+    .cart_icon {
+    float: left;
+    padding: 5px 0 0 5px;
+    }
+    
+    span.border_cart {
+    width: 100px;
+    height: 1px;
+    margin: 3px 0 3px 0;
+    display: block;
+    border-top: 1px #999999 dashed;
+    }
+    /*---------prod_box----------*/
+    .prod_box {
+    width: 173px;
+    height: auto;
+    float: left;
+    padding: 10px 10px 10px 11px;
+    }
+    
+    .top_prod_box {
+    width: 173px;
+    height: 12px;
+    background: url('../../Web/Images/product_box_top.gif') no-repeat center bottom;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    }
+    
+    .bottom_prod_box {
+    width: 173px;
+    height: 10px;
+    background: url('../../Web/Images/product_box_bottom.gif') no-repeat center top;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    }
+    
+    .center_div {
+    height:auto;
+    padding-bottom:50px;
+    }
+    
+    .center_prod_box {
+    width: 173px;
+    height: auto;
+    background: url('../../Web/Images/product_box_center.gif') repeat-y;
+    float: left;
+    text-align: center;
+    padding: 0px 0px 30px 0px;
+    
+    margin: 0px;
+    }
+    
+    .prod_details_tab {
+    width: 173px;
+    height: 31px;
+    float: left;
+    background: url('../../Web/Images/products_details_bg.gif') no-repeat center;
+    margin: 3px 0 0 0;
+    }
+    
+    img.left_bt {
+    float: left;
+    padding: 6px 0 0 6px;
+    }
+    
+    a.prod_details {
+    width: 25px;
+    display: block;
+    float: left;
+    background: url('../../Web/Images/square-blue-add.gif') no-repeat left 50%;
+    padding: 0 0 0 20px;
+    margin: 7px 0 0 38px;
+    _margin: 6px 0 0 35px;
+    text-decoration: none;
+    color: #0fa0dd;
+    }
+    /*---------prod_box_big----------*/
+    .prod_box_big {
+    width: 554px;
+    height: auto;
+    float: left;
+    padding: 10px 10px 10px 15px;
+    }
+    
+    .top_prod_box_big {
+    width: 554px;
+    height: 12px;
+    background: url('../../Web/Images/details_box_top.gif') no-repeat center bottom;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    }
+    
+    .bottom_prod_box_big {
+    width: 554px;
+    height: 12px;
+    background: url('../../Web/Images/details_box_bottom.gif') no-repeat center top;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    }
+    
+    .center_prod_box_big {
+    width: 554px;
+    height: auto;
+    background: url('../../Web/Images/details_box_center.gif') repeat-y;
+    float: left;
+    text-align: center;
+    padding: 0px 0px 30px 0px;
+    margin: 0px;
+    }
+    
+    .product_img_big {
+    width: 170px;
+    padding: 5px 0 5px 10px;
+    float: left;
+    }
+    
+    .details_big_box {
+    width: 345px;
+    float: left;
+    padding: 0 0 0 15px;
+    text-align: left;
+    }
+    
+    .product_title_big {
+    color: #ea2222;
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+    font-size: 14px;
+    }
+    
+    .specifications {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    }
+    
+    .thumbs {
+    padding: 8px 5px 8px 5px;
+    border: 1px #DFD1D1 solid;
+    margin: 3px 0 0 0;
+    }
+    
+    .thumbs a {
+    padding: 3px;
+    }
+    
+    .prod_price_big {
+    padding: 5px 0 5px 0;
+    font-size: 16px;
+    }
+    
+    span.reduce {
+    color: #999999;
+    text-decoration: line-through;
+    }
+    
+    span.price {
+    color: #ea2222;
+    }
+    
+    a.addtocart {
+    width: 76px;
+    height: 27px;
+    display: block;
+    float: left;
+    background: url('../../Web/Images/addtocart.gif') no-repeat left 50%;
+    padding: 0 0 0 33px;
+    text-decoration: none;
+    line-height: 27px;
+    color: #1c4a52;
+    }
+    
+    a.compare {
+    width: 76px;
+    height: 27px;
+    display: block;
+    float: left;
+    margin: 0 0 0 10px;
+    background: url('../../Web/Images/compare.gif') no-repeat left 50%;
+    padding: 0 0 0 33px;
+    text-decoration: none;
+    line-height: 27px;
+    color: #1c4a52;
+    }
+    
+    span.blue {
+    color: #5F9FAB;
+    }
+    
+    
+    /*---------------contact_form------------------*/
+    .contact_form {
+    width: 355px;
+    float: left;
+    padding: 0px 0 30px 35px;
+    }
+    
+    .form_row {
+    width: 335px;
+    clear: both;
+    padding: 10px 0 10px 0;
+    _padding: 5px 0 5px 0;
+    color: #a53d17;
+    }
+    
+    label.contact {
+    width: 75px;
+    float: left;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px 0px 10px 0px;
+    color: #333333;
+    }
+    
+    .contact_form input {
+    width: 350px;
+    height: 18px;
+    background-color: #fff;
+    color: #999999;
+    padding:5px 10px 10px 0;
+    border: 1px #DFDFDF solid;
+    border-radius:8px;
+    float: left;
+    }
+    
+    .contact_form select {
+    width: 360px;
+    height: 38px;
+    background-color: #fff;
+    color: #999999;
+    padding:10px 10px 10px 0;
+    border: 1px #DFDFDF solid;
+    border-radius:8px;
+    float: left;
+    }
+    
+    .contact_form textarea {
+    width: 360px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #999999;
+    background-color: #fff;
+    border: 1px #DFDFDF solid;
+    border-radius:8px;
+    float: left;
+    }
+    
+    .contact_form input[type="submit"] {
+    width: 100px;
+    height: 45px;
+    background-color: #fff;
+    text-align:right;
+    color: #999999;
+    padding:5px 10px 10px 0;
+    border: 1px #DFDFDF solid;
+    background: url('../../Web/Images/1449609781_save_add.png') no-repeat left 50%;
+    border-radius:8px;
+    float: right;
+    }
+    
+    .contact a {
+    width: 99px;
+    height: 27px;
+    display: block;
+    float: right;
+    margin: 0 0 0 10px;
+    background: url('../../Web/Images/contact_bt.gif') no-repeat left 50%;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+    line-height: 27px;
+    color: #1c4a52;
+    }
+    
+    /*--------------footer----------------*/
+    .footer {
+    width: 1000px;
+    clear: both;
+    height: 65px;
+    background: url('../../Web/Images/footer_bg.gif') repeat-x 50% top;
+    }
+    
+    .left_footer {
+    float: left;
+    width: 300px;
+    padding: 5px 0 0 10px;
+    }
+    
+    .right_footer {
+    float: right;
+    padding: 15px 30px 0 0;
+    }
+    
+    .right_footer a {
+    padding: 0 0 0 7px;
+    text-decoration: none;
+    color: #666666;
+    }
+    
+    .right_footer a:hover {
+    text-decoration: underline;
+    }
+    
+    .center_footer {
+    float: left;
+    width: 200px;
+    text-align: center;
+    color: #666666;
+    padding: 10px 0 0 60px;
+    }
+    </style>
+</head>
+<body>
+    
+    <!-- HTML: -->
+    
+    <html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Elektronik Market</title>
+    <link href="../ControlTemplates/Web/Css/style.css" rel="stylesheet">
+    <link href="../ControlTemplates/Web/Css/iecss.css" rel="stylesheet">
+    
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="iecss.css" />
+    <![endif]-->
+    <script src="../ControlTemplates/Web/Js/boxOver.js"></script>
+    </head>
+    <body>
+    <form method="post" action="./Default.aspx?Module=SignUp" onsubmit="javascript:return WebForm_OnSubmit();" id="formMain">
+    <div class="aspNetHidden">
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+    <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+    </div>
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    var theForm = document.forms['formMain'];
+    if (!theForm) {
+    theForm = document.formMain;
+    }
+    function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+    theForm.__EVENTTARGET.value = eventTarget;
+    theForm.__EVENTARGUMENT.value = eventArgument;
+    theForm.submit();
+    }
+    }
+    //]]>
+    </script>
+    
+    
+    <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZCl_jmxcyMhb pxBRKCFiotfRZyzfBbX60QLQfc8iwmpPboaTA-e5HY81DXnAS4rlpg2&amp;t=635793135765829480" type="text/javascript"></script>
+    
+    
+    <script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakHg2URXBG9jd HAS1tIiwN-GG6C9psqo6RNRLNbyB3X-t6pFu23lZOx889ZICzdZsUsQXdDO4vTH08RTz8lJvPug1&amp; t=635793135765829480" type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    function WebForm_OnSubmit() {
+    if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+    return true;
+    }
+    //]]>
+    </script>
+    
+    <div class="aspNetHidden">
+    
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="315CBD8D">
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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">
+    </div>
+    <div id="main_container">
+    <div class="top_bar">
+    <div class="top_search">
+    <div class="search_text"><a href="#">Detaylı Arama</a></div>
+    <input type="text" class="search_input" name="search">
+    <input type="image" src="../ControlTemplates/Web/Images/search.gif" class="search_bt">
+    </div>
+    
+    </div>
+    <div id="header">
+    
+    <div id="logo">
+    <a href="index.html">
+    <img src="http://p2p.wrox.com/ControlTemplates/Web/Images/logo.png" alt="" title="" border="0" width="237" height="140"></a>
+    </div>
+    
+    
+    <!-- end of oferte_content-->
+    
+    
+    </div>
+    <div id="main_content">
+    
+    <div id="menu_tab">
+    <div class="left_menu_corner"></div>
+    <ul class="menu">
+    <li><a href="Default.aspx" class="nav1">Ana Sayfa </a></li>
+    <li class="divider"></li>
+    <li><a href="#" class="nav2">ÃrÃ¼nler</a></li>
+    <li class="divider"></li>
+    <li><a href="#" class="nav3">Ãzel ÃrÃ¼nler</a></li>
+    <li class="divider"></li>
+    <li><a href="MemberAccount.aspx" class="nav4">Hesabım</a></li>
+    <li class="divider"></li>
+    <li><a href="Default.aspx?Module=SignUp" class="nav4">Ãye Ol</a></li>
+    <li class="divider"></li>
+    <li><a href="#" class="nav5">Sipariş Takip </a></li>
+    <li class="divider"></li>
+    <li><a href="contact.html" class="nav6">İletişim</a></li>
+    <li class="divider"></li>
+    </ul>
+    
+    <div class="right_menu_corner"></div>
+    </div>
+    <!-- end of menu tab -->
+    
+    <div class="crumb_navigation">
+    Navigation: <span class="current">Home</span>
+    </div>
+    
+    </div>
+    <!-- end of main content -->
+    
+    <div class="left_content">
+    
+    <div class="title_box">Kategoriler</div>
+    
+    <ul class="left_menu">
+    <li class="odd"><a href="#">Telefon</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Cep Telefonu</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Kablolu Ev Telefonları</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Kablosuz Telefonlar</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Tablet</a></li>
+    </ul>
+    
+    
+    
+    <ul class="left_menu">
+    <li class="odd"><a href="#">Bilgisayar</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">MasaÃ¼stÃ¼</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Taşınabilir Bilgisayar</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Yazıcılar</a></li>
+    </ul>
+    
+    
+    
+    <ul class="left_menu">
+    <li class="odd"><a href="#">Bilgisayar ParÃ§aları</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Anakart</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Bellek</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Ekran Kartı</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Mouse</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">SSD</a></li>
+    </ul>
+    
+    
+    
+    <ul class="left_menu">
+    <li class="odd"><a href="#">TV&amp;Ev Elektroniği</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">3D Led</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Led Tv</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Plazma Tv</a></li>
+    </ul>
+    
+    
+    
+    <ul class="left_menu">
+    <li class="odd"><a href="#">Foto &amp; Kamera</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">Kompakt Makineler</a></li>
+    </ul>
+    
+    <ul class="left_menu">
+    <li class="even"><a href="#">SLR Makineler</a></li>
+    </ul>
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    <!-- end of left content -->
+    
+    <div class="center_content">
+    
+    
+    <div class="center_title_bar">Ãye Kayıt</div>
+    
+    <div class="prod_box_big">
+    <div class="top_prod_box_big">
+    <div class="center_prod_box_big">
+    <div class="contact_form">
+    <div class="form_row">
+    <label class="contact"><strong>E-Mail:</strong></label>
+    <input name="ctl00$cphMain$ctl00$txtMail" type="text" id="cphMain_ctl00_txtMail">
+    <span id="cphMain_ctl00_rfvMail" style="visibility:hidden;">Zorunlu Alan</span>
+    <span id="cphMain_ctl00_revMail" style="visibility:hidden;">Mail formatı uygun değil.</span>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Şifre:</strong></label>
+    <input name="ctl00$cphMain$ctl00$txtPassword" type="password" id="cphMain_ctl00_txtPassword">
+    <span id="cphMain_ctl00_rfvPassword" style="visibility:hidden;">Zorunlu Alan</span>
+    </div>
+    
+    
+    <div class="form_row">
+    <label class="contact"><strong>Ad Soyad:</strong></label>
+    <input name="ctl00$cphMain$ctl00$txtNameSurname" type="text" id="cphMain_ctl00_txtNameSurname">
+    <span id="cphMain_ctl00_rfvNameSurname" style="visibility:hidden;">Zorunlu Alan</span>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Adres:</strong></label>
+    <textarea name="ctl00$cphMain$ctl00$txtAddress" rows="2" cols="20" id="cphMain_ctl00_txtAddress"></textarea>
+    <span id="cphMain_ctl00_rfvAddress" style="visibility:hidden;">Zorunlu Alan</span>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Telefon:</strong></label>
+    <input name="ctl00$cphMain$ctl00$txtTelephone" type="text" id="cphMain_ctl00_txtTelephone">
+    <span id="cphMain_ctl00_rfvTelephone" style="visibility:hidden;">Zorunlu Alan</span>
+    </div>
+    
+    <div class="form_row">
+    <label class="contact"><strong>Gsm:</strong></label>
+    <input name="ctl00$cphMain$ctl00$txtMobile" type="text" id="cphMain_ctl00_txtMobile">
+    <span id="cphMain_ctl00_rfvMobile" style="visibility:hidden;">Zorunlu Alan</span>
+    </div>
+    <div class="form_row">
+    <label class="contact"><strong>Şehir:</strong></label>
+    <select name="ctl00$cphMain$ctl00$ddlCity" onchange="javascript:setTimeout('__doPostBack(\'ct l00$cphMain$ctl00$ddlCity\',\'\')', 0)" id="cphMain_ctl00_ddlCity" style="visibility: visible;">
+    <option selected="selected" value="1">ADANA</option>
+    <option value="72">ADIYAMAN</option>
+    <option value="60">AFYON</option>
+    <option value="38">AĞRI</option>
+    <option value="57">AKSARAY</option>
+    <option value="74">AMASYA</option>
+    <option value="4">ANKARA</option>
+    <option value="9">ANTALYA</option>
+    <option value="39">ARDAHAN</option>
+    <option value="77">ARTVİN</option>
+    <option value="12">AYDIN</option>
+    <option value="15">BALIKESİR</option>
+    <option value="49">BARTIN</option>
+    <option value="32">BATMAN</option>
+    <option value="40">BAYBURT</option>
+    <option value="23">BİLECİK</option>
+    <option value="33">BİNGÃL</option>
+    <option value="17">BİTLİS</option>
+    <option value="5">BOLU</option>
+    <option value="10">BURDUR</option>
+    <option value="24">BURSA</option>
+    <option value="16">ÃANAKKALE</option>
+    <option value="6">ÃANKIRI</option>
+    <option value="75">ÃORUM</option>
+    <option value="13">DENİZLİ</option>
+    <option value="34">DİYARBAKIR</option>
+    <option value="7">DÃZCE</option>
+    <option value="36">EDİRNE</option>
+    <option value="64">ELAZIĞ</option>
+    <option value="41">ERZİNCAN</option>
+    <option value="42">ERZURUM</option>
+    <option value="61">ESKİŞEHİR</option>
+    <option value="45">GAZİANTEP</option>
+    <option value="78">GİRESUN</option>
+    <option value="79">GÃMÃŞHANE</option>
+    <option value="18">HAKKARİ</option>
+    <option value="47">HATAY</option>
+    <option value="43">IĞDIR</option>
+    <option value="11">ISPARTA</option>
+    <option value="28">İSTANBUL</option>
+    <option value="30">İZMİR</option>
+    <option value="48">KAHRAMANMARAŞ</option>
+    <option value="50">KARABÃK</option>
+    <option value="58">KARAMAN</option>
+    <option value="44">KARS</option>
+    <option value="51">KASTAMONU</option>
+    <option value="53">KAYSERİ</option>
+    <option value="8">KIRIKKALE</option>
+    <option value="37">KIRKLARELİ</option>
+    <option value="54">KIRŞEHİR</option>
+    <option value="46">KİLİS</option>
+    <option value="25">KOCAELİ</option>
+    <option value="59">KONYA</option>
+    <option value="62">KÃTAHYA</option>
+    <option value="65">MALATYA</option>
+    <option value="31">MANİSA</option>
+    <option value="35">MARDİN</option>
+    <option value="2">MERSİN</option>
+    <option value="14">MUĞLA</option>
+    <option value="19">MUŞ</option>
+    <option value="55">NEVŞEHİR</option>
+    <option value="56">NİĞDE</option>
+    <option value="67">ORDU</option>
+    <option value="3">OSMANİYE</option>
+    <option value="80">RİZE</option>
+    <option value="26">SAKARYA</option>
+    <option value="68">SAMSUN</option>
+    <option value="20">SİİRT</option>
+    <option value="69">SİNOP</option>
+    <option value="70">SİVAS</option>
+    <option value="73">ŞANLIURFA</option>
+    <option value="21">ŞIRNAK</option>
+    <option value="29">TEKİRDAĞ</option>
+    <option value="76">TOKAT</option>
+    <option value="81">TRABZON</option>
+    <option value="66">TUNCELİ</option>
+    <option value="63">UŞAK</option>
+    <option value="22">VAN</option>
+    <option value="27">YALOVA</option>
+    <option value="71">YOZGAT</option>
+    <option value="52">ZONGULDAK</option>
+    
+    </select>
+    
+    <span id="cphMain_ctl00_rfvCity" style="visibility:hidden;">Zorunlu Alan</span>
+    </div>
+    <div class="form_row">
+    <label class="contact"><strong>İlÃ§e:</strong></label>
+    <select name="ctl00$cphMain$ctl00$ddlTown" id="cphMain_ctl00_ddlTown" style="visibility: visible;">
+    <option value="1">ALADAĞ</option>
+    <option value="2">CEYHAN</option>
+    <option value="3">FEKE</option>
+    <option value="4">KARAİSALI</option>
+    <option value="5">KOZAN</option>
+    <option value="6">POZANTI</option>
+    <option value="7">SAİMBEYLİ</option>
+    <option value="8">SEYHAN</option>
+    <option value="9">YUMURTALIK</option>
+    <option value="10">YÃREĞİR</option>
+    
+    </select>
+    
+    <span id="cphMain_ctl00_rfvTown" style="visibility:hidden;">Zorunlu Alan</span>
+    </div>
+    
+    <div class="form_row">
+    <input type="submit" name="ctl00$cphMain$ctl00$btnSave" value="Kaydet" onclick="javascript:WebForm_DoPostBackWithOptions( new WebForm_PostBackOptions(&quot;ctl00$cphMain$ctl00$ btnSave&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="cphMain_ctl00_btnSave">
+    <span id="cphMain_ctl00_lblResult"></span>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    </div>
+    <!-- end of center content -->
+    
+    <div class="right_content">
+    
+    </div>
+    <!-- end of right content -->
+    
+    
+    
+    
+    
+    <div class="footer">
+    
+    
+    <div class="left_footer">
+    <img src="http://p2p.wrox.com/ControlTemplates/Web/Images/footer_logo.png" alt="" title="" width="170" height="49">
+    </div>
+    
+    <div class="center_footer">
+    TÃ¼m hakları saklıdır 2015
+    </div>
+    
+    <div class="right_footer">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="details.html">Hakkında</a>
+    <a href="contact.html">İletişim</a>
+    </div>
+    
+    </div>
+    
+    
+    </div>
+    <!-- end of main_container -->
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    var Page_Validators = new Array(document.getElementById("cphMain_ctl00_rfvMa il"), document.getElementById("cphMain_ctl00_revMail"), document.getElementById("cphMain_ctl00_rfvPassword "), document.getElementById("cphMain_ctl00_rfvNameSurn ame"), document.getElementById("cphMain_ctl00_rfvAddress" ), document.getElementById("cphMain_ctl00_rfvTelephon e"), document.getElementById("cphMain_ctl00_rfvMobile") , document.getElementById("cphMain_ctl00_rfvCity"), document.getElementById("cphMain_ctl00_rfvTown"));
+    //]]>
+    </script>
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    var cphMain_ctl00_rfvMail = document.all ? document.all["cphMain_ctl00_rfvMail"] : document.getElementById("cphMain_ctl00_rfvMail");
+    cphMain_ctl00_rfvMail.controltovalidate = "cphMain_ctl00_txtMail";
+    cphMain_ctl00_rfvMail.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvMail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvMail.initialvalue = "";
+    var cphMain_ctl00_revMail = document.all ? document.all["cphMain_ctl00_revMail"] : document.getElementById("cphMain_ctl00_revMail");
+    cphMain_ctl00_revMail.controltovalidate = "cphMain_ctl00_txtMail";
+    cphMain_ctl00_revMail.errormessage = "Mail formatı uygun değil.";
+    cphMain_ctl00_revMail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+    cphMain_ctl00_revMail.validationexpression = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+    var cphMain_ctl00_rfvPassword = document.all ? document.all["cphMain_ctl00_rfvPassword"] : document.getElementById("cphMain_ctl00_rfvPassword ");
+    cphMain_ctl00_rfvPassword.controltovalidate = "cphMain_ctl00_txtPassword";
+    cphMain_ctl00_rfvPassword.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvPassword.initialvalue = "";
+    var cphMain_ctl00_rfvNameSurname = document.all ? document.all["cphMain_ctl00_rfvNameSurname"] : document.getElementById("cphMain_ctl00_rfvNameSurn ame");
+    cphMain_ctl00_rfvNameSurname.controltovalidate = "cphMain_ctl00_txtNameSurname";
+    cphMain_ctl00_rfvNameSurname.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvNameSurname.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvNameSurname.initialvalue = "";
+    var cphMain_ctl00_rfvAddress = document.all ? document.all["cphMain_ctl00_rfvAddress"] : document.getElementById("cphMain_ctl00_rfvAddress" );
+    cphMain_ctl00_rfvAddress.controltovalidate = "cphMain_ctl00_txtAddress";
+    cphMain_ctl00_rfvAddress.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvAddress.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvAddress.initialvalue = "";
+    var cphMain_ctl00_rfvTelephone = document.all ? document.all["cphMain_ctl00_rfvTelephone"] : document.getElementById("cphMain_ctl00_rfvTelephon e");
+    cphMain_ctl00_rfvTelephone.controltovalidate = "cphMain_ctl00_txtTelephone";
+    cphMain_ctl00_rfvTelephone.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvTelephone.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvTelephone.initialvalue = "";
+    var cphMain_ctl00_rfvMobile = document.all ? document.all["cphMain_ctl00_rfvMobile"] : document.getElementById("cphMain_ctl00_rfvMobile") ;
+    cphMain_ctl00_rfvMobile.controltovalidate = "cphMain_ctl00_txtMobile";
+    cphMain_ctl00_rfvMobile.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvMobile.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvMobile.initialvalue = "";
+    var cphMain_ctl00_rfvCity = document.all ? document.all["cphMain_ctl00_rfvCity"] : document.getElementById("cphMain_ctl00_rfvCity");
+    cphMain_ctl00_rfvCity.controltovalidate = "cphMain_ctl00_ddlCity";
+    cphMain_ctl00_rfvCity.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvCity.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvCity.initialvalue = "";
+    var cphMain_ctl00_rfvTown = document.all ? document.all["cphMain_ctl00_rfvTown"] : document.getElementById("cphMain_ctl00_rfvTown");
+    cphMain_ctl00_rfvTown.controltovalidate = "cphMain_ctl00_ddlTown";
+    cphMain_ctl00_rfvTown.errormessage = "Zorunlu Alan";
+    cphMain_ctl00_rfvTown.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+    cphMain_ctl00_rfvTown.initialvalue = "";
+    //]]>
+    </script>
+    
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    
+    var Page_ValidationActive = false;
+    if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+    }
+    
+    function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+    return ValidatorCommonOnSubmit();
+    }
+    else {
+    return true;
+    }
+    }
+    //]]>
+    </script>
+    </form>
+    
+</body>
+</html>
